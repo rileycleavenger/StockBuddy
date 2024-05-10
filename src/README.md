@@ -1,0 +1,1 @@
+This folder is used for all code files that aren't used directly within the React app.
