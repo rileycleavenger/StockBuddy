@@ -1,13 +1,11 @@
 import React from 'react';
 
-class StockBuddyHomePage extends React.Component {
-  render() {
+const StockBuddyHomePage: React.FC = () => {
     return (
       <div>
         <p>This is the Stock Buddy Home page.</p>
       </div>
     );
-  }
 }
 
 export default StockBuddyHomePage;

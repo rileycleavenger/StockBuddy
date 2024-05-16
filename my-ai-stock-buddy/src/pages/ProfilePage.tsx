@@ -1,13 +1,12 @@
 import React from 'react';
 
-class ProfilePage extends React.Component {
-  render() {
+const ProfilePage: React.FC = () => {
     return (
       <div>
         <p>This is the Profile page.</p>
       </div>
     );
   }
-}
+
 
 export default ProfilePage;
