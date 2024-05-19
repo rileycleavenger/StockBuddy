@@ -9,7 +9,7 @@ const Nav: FC = () => {
         <nav className={styles.navbar}>
 
             <div className={styles['logo-container']}>
-                <a href='https://www.websiteName.com'>Logo??</a>
+                <a href='/'>Logo??</a>
             </div>
 
             <div className={styles['links-container']}>

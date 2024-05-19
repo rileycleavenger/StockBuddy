@@ -1,11 +1,13 @@
 import React from 'react';
+import Nav from '../components/Nav/Nav';
 
 const AboutPage: React.FC = () => {
 
     return (
-      <div>
+      <>
+        <Nav />
         <p>This is the About page.</p>
-      </div>
+      </>
     );
   }
 
