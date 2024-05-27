@@ -1,10 +1,12 @@
 import React from 'react';
+import Nav from '../components/Nav/Nav';
 
 const SignUpPage: React.FC = () => {
     return (
-      <div>
+      <>
+        <Nav />
         <p>This is the Signup page.</p>
-      </div>
+      </>
     );
 }
 
