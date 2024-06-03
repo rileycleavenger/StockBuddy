@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* About Page */
+.About-Image{
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  border-radius: 10px;
+
+}
+.About-Header{
+  text-align: center;
+}
+.About-Summary{
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.Team-Header{
+  text-align: left;
+  padding-left: 80px;
+  text-decoration: underline;
+}
+.team-members{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 80px;
+  gap: 80px;
+}
+
+.team-member {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+}
+
+.team-member-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-member-links a {
+  display: block;
+  margin: 5px 0;
+  color: #0073b1;
+  text-decoration: none;
+}
+
+.team-member-links a:hover {
+  text-decoration: underline;
+}
+
+
