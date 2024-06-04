@@ -40,7 +40,8 @@ code {
   display: flex;
   flex-wrap: wrap;
   padding-left: 80px;
-  gap: 80px;
+  padding-right: 40px;
+  gap: 10px;
 }
 
 .team-member {
