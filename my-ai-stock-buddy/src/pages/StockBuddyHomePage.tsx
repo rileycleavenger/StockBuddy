@@ -1,12 +1,36 @@
 import React from 'react';
 import Nav from '../components/Nav/Nav';
+import styles from './StockBuddyHomePage.module.css';
+
 
 const StockBuddyHomePage: React.FC = () => {
     return (
-      <>
+      <div className={styles.body}>
         <Nav />
-        <p>This is the Stock Buddy Home page.</p>
-      </>
+
+        <div className={styles.content}>
+
+          <div className={styles.main}>
+            <p>This is where the main content goes</p>
+          </div>
+
+
+          <div className={styles.right}> 
+
+            <div className={styles.stocks}>
+              <p>This is where the live stocks go</p>
+            </div>
+
+            <div className={styles.notes}>
+              <p>This is where the notes go</p>
+            </div>
+
+          </div> 
+
+
+        </div>
+
+      </div>
     );
 }
 
