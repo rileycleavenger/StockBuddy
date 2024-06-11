@@ -1,6 +1,5 @@
 import React, {FC} from 'react';
 import Nav from './components/Nav/Nav';
-//import Router from './components/Router';
 
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutPage from './pages/AboutPage';
