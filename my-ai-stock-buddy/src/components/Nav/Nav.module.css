@@ -12,6 +12,9 @@
 .logoContainer {
     cursor: pointer;
     margin-left: 2vw;
+    img {
+        height: 175px;
+    }
 }
 
 .linksContainer {
