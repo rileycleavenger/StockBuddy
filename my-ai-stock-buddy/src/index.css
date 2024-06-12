@@ -15,6 +15,7 @@ code {
 
 /* About Page */
 .About-Image{
+  padding-top: 15px;
   max-width: 100%;
   display: block;
   margin-left: auto;
@@ -41,7 +42,8 @@ code {
   flex-wrap: wrap;
   padding-left: 80px;
   padding-right: 40px;
-  gap: 10px;
+  gap: 80px;
+  justify-content: center;
 }
 
 .team-member {
@@ -50,6 +52,7 @@ code {
   border-radius: 5px;
   text-align: center;
   width: 200px;
+  
 }
 
 .team-member-image {
@@ -60,14 +63,15 @@ code {
 }
 
 .team-member-links a {
-  display: block;
+  /* display: block; */
+  padding: 15px;
   margin: 5px 0;
   color: #0073b1;
   text-decoration: none;
 }
 
-.team-member-links a:hover {
+/* .team-member-links a:hover {
   text-decoration: underline;
-}
+} */
 
 
