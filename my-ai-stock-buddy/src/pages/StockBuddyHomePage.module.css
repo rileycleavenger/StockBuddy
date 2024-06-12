@@ -26,12 +26,39 @@
 .stocks{
     background-color: #d9d9d9;
     padding: 20px;
+    height: 175px;
+    box-sizing: border-box;
+}
+
+.spacer{
+    height: 25px;
 }
 
 .notes{
-    background-color: #d9d9d9;
-    padding: 20px;
+    background-color: #090909;
+    padding-top: 7px;
     margin-top: 20px;
+    height: 175px;
+    box-sizing: border-box;
+}
+
+.folder{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #d9d9d9;
+    border-radius: 0 5px 5px 5px;
+}
+
+.folder::after{
+    content: "";
+    position: absolute;
+    bottom: 98%;
+    left: 0;
+    width: 80px;
+    height: 25px;
+    background: #d9d9d9;
+    border-radius: 5px 5px 0 0;
 }
 
 @media screen and (max-width: 800px) {

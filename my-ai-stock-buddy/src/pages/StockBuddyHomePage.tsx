@@ -21,8 +21,12 @@ const StockBuddyHomePage: React.FC = () => {
               <p>This is where the live stocks go</p>
             </div>
 
+            <div className={styles.spacer}></div>
+
             <div className={styles.notes}>
-              <p>This is where the notes go</p>
+              <div className={styles.folder}>
+                <p>This is where the notes go</p>
+              </div>
             </div>
 
           </div> 
