@@ -13,8 +13,14 @@
 .main{
     float: left;
     width: 75%;
-    padding-left: 20px;
     background-color: #d9d9d9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 30px;
+    box-sizing: border-box; 
+    flex-direction: row;
 }
 
 .right{
@@ -72,4 +78,121 @@
     .main {
       margin-right: 0;
     }
+}
+
+
+.leftColumn {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.outerContainer {
+    padding: 30px; 
+}
+
+.switch {
+    background-color:black;
+    width: 106px;
+    height: 40px;
+    border-radius: 75px; 
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.switchButton {
+    cursor: pointer;
+    background-color: #D9D9D9;
+    width: 55px;
+    height: 38px;
+    border-radius: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.filter {
+    background-color: #D9D9D9;
+    height: 35px;
+    width: 95px;
+    cursor: pointer;
+    border-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterContainer {
+    position: relative;
+    background-color: black;
+    height: 430px;
+    width: 120px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap: 15px; 
+    
+}
+
+.clicked {
+    background-color: #A6FFA1;
+  }
+
+
+.rightColumn {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+
+.contentBox {
+    background-color: white;
+    height: 485px;
+    width: 100%;
+    position: relative;
+
+}
+
+.redButtonRow {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.generateButton {
+    background-color: #f64740;
+    height: 45px;
+    width: 130px;
+    cursor: pointer;
+    border-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.saveResultsButton {
+    background-color: #f64740;
+    height: 45px;
+    width: 130px;
+    cursor: pointer;
+    border-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
