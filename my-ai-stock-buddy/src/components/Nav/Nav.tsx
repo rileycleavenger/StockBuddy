@@ -1,34 +1,43 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import styles from './Nav.module.css';
-
+import logo from './images/StockBuddyLogo.png'; // declare the logo
+import { Link, useLocation } from 'react-router-dom';
 
 
 
 const Nav: FC = () => {
+    
+    const location = useLocation();
+    const [activePage, setActivePage] = useState<string>(location.pathname);
+  
+    useEffect(() => {
+      setActivePage(location.pathname);
+    }, [location]);
+
     return (
         <nav className={styles.navbar}>
 
-            <div className={styles['logo-container']}>
-                <a href='/'>Logo??</a>
+            <div className={styles.logoContainer}>
+                <Link to='/'><img src={logo}/></Link>
             </div>
 
-            <div className={styles['links-container']}>
+            <div className={styles.linksContainer}>
 
 
-                <div className={styles['About']}>
-                <a href='/about'>About</a>
+                <div className={activePage === '/' ? styles.active : styles.inactive}>
+                    <Link to='/'>Home</Link>
                 </div>
 
-                <div className={styles['Login']}>
-                    <a href='/login'>Login</a>
+                <div className={activePage === '/profile' ? styles.active : styles.inactive}>
+                    <Link to='/profile' >User</Link>
                 </div>
 
-                <div className={styles['SignUp']}>
-                    <a href='/signup'>Sign Up</a>
+                <div className={activePage === '/about' ? styles.active : styles.inactive}>
+                    <Link to='/about'>About</Link>
                 </div>
 
-                <div className={styles['Profile']}>
-                    <a href='/profile'>Profile</a>
+                <div className={activePage === '/login' ? styles.active : styles.inactive} id={styles.login}>
+                    <Link to='/login'>Login</Link>
                 </div>
 
 
