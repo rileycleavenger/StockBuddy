@@ -4,6 +4,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 gainers_url = 'https://stockanalysis.com/markets/gainers/'
 losers_url = 'https://stockanalysis.com/markets/losers/'
+news_url = 'https://stockanalysis.com/news/'
 
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
@@ -24,6 +25,17 @@ def extractCompanies(url):
         price = company.find_element(by = "xpath", value = './/td[contains(@class, "svelte-eurwtr")][5]').text
         company_data.append((name, symbol, percent, price))
     return company_data
+
+def extractHeadlines(url):
+    driver.get(url)
+    headlines = driver.find_elements(by="xpath", value='//div[contains(@class, "wrsb")]//div[contains(@class, "uncontain")]//div[contains(@class, "mb-2 flex flex-col space-y-3 overflow-x-hidden bg-gray-200 dark:bg-dark-950 sm:space-y-0 sm:bg-white dark:sm:bg-dark-800 lg:border-0")]//div[contains(@class, "gap-4 border-gray-300 bg-white p-4 shadow last:pb-1 last:shadow-none dark:border-dark-600 dark:bg-dark-800 sm:border-b sm:px-0 sm:shadow-none sm:last:border-b-0 lg:gap-5 sm:grid sm:grid-cols-news sm:py-6")]')
+
+    headline_data = []
+    for headline in headlines:
+        title = headline.find_element(by = "xpath", value = './/div[contains(@class, "lex flex-col")]//h3[contains(@class, "mb-2 mt-3 text-xl font-bold leading-snug sm:order-2 sm:mt-0 sm:leading-tight")]//a[contains(@class, "text-default hover:text-blue-brand_sharp dark:text-neutral-300 dark:hover:text-blue-darklink")]').text
+        link = headline.find_element(by = "xpath", value = './/div[contains(@class, "lex flex-col")]//h3[contains(@class, "mb-2 mt-3 text-xl font-bold leading-snug sm:order-2 sm:mt-0 sm:leading-tight")]//a[contains(@class, "text-default hover:text-blue-brand_sharp dark:text-neutral-300 dark:hover:text-blue-darklink")]').get_attribute('href')
+        headline_data.append((title, link))
+    return headline_data
 
 # Printing in terminal for testing purposes
 # Extract gainers
@@ -49,5 +61,13 @@ for name, symbol, percent, price in losers:
     print(percent)
     print("$" + price)
     print("")
+
+print("\nHeadlines\n")
+
+headlines = extractHeadlines(news_url)
+
+for title, link in headlines:
+    print(title)
+    print(link)
 
 driver.quit()  # Close the driver when done
