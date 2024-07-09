@@ -69,5 +69,6 @@ headlines = extractHeadlines(news_url)
 for title, link in headlines:
     print(title)
     print(link)
+    print("")
 
 driver.quit()  # Close the driver when done
