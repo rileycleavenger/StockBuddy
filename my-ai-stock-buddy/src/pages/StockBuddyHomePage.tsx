@@ -27,6 +27,13 @@ const handleFilterClick = (index: number) => {
       setIsRightAligned(!isRightAligned);
     };
 
+    /* Slider movement handling */
+    const [value, setValue] = useState(500);
+
+    const getValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setValue(Number(event.target.value));
+    };
+
     return (
       <div className={styles.body}>
         <Nav />
@@ -43,7 +50,14 @@ const handleFilterClick = (index: number) => {
               <div className = {styles.switchButton} onClick={toggleSwitch}>
                 <p>Click me</p>
               </div>
+
               </div>
+
+              <div className={styles.sliderContainer}>
+                <input type="range" min="1" max="1000" value={value} className={styles.slider} 
+                id="myRange" onChange={getValue}/>
+                <p className = {styles.sliderLabel}>Max Investment: ${value}</p> 
+                </div>
 
 
             <div className={styles.filterContainer}>
