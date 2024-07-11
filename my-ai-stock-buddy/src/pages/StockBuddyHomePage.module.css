@@ -196,3 +196,45 @@
     justify-content: center;
     align-items: center;
 }
+
+.sliderLabel{
+    font-size: 75%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slider{
+    -webkit-appearance: none;
+    -webkit-transition: none;
+    appearance: none; 
+    background: black;
+    opacity: 0.7;
+    transition: opacity .2s;
+    outline: none;
+    border-radius: 10px;
+    height: 15px;
+}
+
+.slider:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    background: #A6FFA1;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #A6FFA1;
+  }
+  
+
