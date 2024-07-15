@@ -1,2 +1,4 @@
+beautifulsoup4
 selenium
-webdriver-manager
+webdriver_manager
+flask
