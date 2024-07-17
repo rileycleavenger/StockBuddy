@@ -1,13 +1,27 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+from flask import Flask
+import os
+import logging
 
 gainers_url = 'https://stockanalysis.com/markets/gainers/'
 losers_url = 'https://stockanalysis.com/markets/losers/'
 news_url = 'https://stockanalysis.com/news/'
 
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service)
+# Set up Selenium options 
+options = Options()
+options.page_load_strategy = 'eager' 
+
+options.add_argument('--no-sandbox')
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+options.add_argument('--disable-dev-shm-usage')
+options.add_argument("--window-size=1920,1080")
+options.add_argument('--remote-debugging-port=9222')
+
+driver = webdriver.Chrome(options=options)
 
 # Function to scrape a URL for stock information
 def extractCompanies(url):
@@ -37,38 +51,50 @@ def extractHeadlines(url):
         headline_data.append((title, link))
     return headline_data
 
-# Printing in terminal for testing purposes
-# Extract gainers
-print("\nGainers\n")
+app = Flask(__name__)
 
-gainers = extractCompanies(gainers_url)
+@app.route('/test', methods=['GET'])
+def scrape_test():
+    # Printing in terminal for testing purposes
+    # Extract gainers
+    logging.warning("\nGainers\n")
 
-for name, symbol, percent, price in gainers:
-    print(name)
-    print(symbol)
-    print(percent)
-    print("$" + price)
-    print("")
+    gainers = extractCompanies(gainers_url)
 
-# Extract losers
-print("\nLosers\n")
+    for name, symbol, percent, price in gainers:
+        logging.warning(name)
+        logging.warning(symbol)
+        logging.warning(percent)
+        logging.warning("$" + price)
+        logging.warning("")
 
-losers = extractCompanies(losers_url)
+    # Extract losers
+    logging.warning("\nLosers\n")
 
-for name, symbol, percent, price in losers:
-    print(name)
-    print(symbol)
-    print(percent)
-    print("$" + price)
-    print("")
+    losers = extractCompanies(losers_url)
 
-print("\nHeadlines\n")
+    for name, symbol, percent, price in losers:
+        logging.warning(name)
+        logging.warning(symbol)
+        logging.warning(percent)
+        logging.warning("$" + price)
+        logging.warning("")
 
-headlines = extractHeadlines(news_url)
+    logging.warning("\nHeadlines\n")
 
-for title, link in headlines:
-    print(title)
-    print(link)
-    print("")
+    headlines = extractHeadlines(news_url)
 
-driver.quit()  # Close the driver when done
+    for title, link in headlines:
+        logging.warning(title)
+        logging.warning(link)
+        logging.warning("")
+
+    driver.quit()  # Close the driver when done
+    
+    return "succesful"
+
+if __name__ == '__main__':
+    
+    # Use the PORT environment variable if it's defined, otherwise default to 8080
+    port = int(os.getenv('PORT', 8080))
+    app.run(host='0.0.0.0', port=port)
