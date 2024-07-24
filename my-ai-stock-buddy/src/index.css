@@ -130,8 +130,11 @@ code {
 }
 
 .signup-box {
+  text-align: center;
   background: white;
-  padding: 50px;
+  padding: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -147,25 +150,25 @@ code {
   flex-direction: column;
 }
 
-.form-group {
+.form-group-sign {
   margin-bottom: 20px;
   text-align: left;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
+.form-group-sign label {
+  display: contents;
 }
 
-.form-group input {
+.form-group-sign input {
   width: 100%;
   padding: 10px;
+  margin-top: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.signup-button {
+.signup-button-sign {
   background-color: black;
   color: white;
   padding: 10px;
@@ -189,7 +192,7 @@ code {
   background: #ddd;
   position: absolute;
   top: 50%;
-  width: 2%;
+  width: 20%;
 }
 
 .login-link::before {
@@ -200,14 +203,14 @@ code {
   right: 0;
 }
 
-.login-button {
+.login-button-sign {
   background-color: #ddd;
   color: black;
   padding: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 100%; /* Ensure the button takes the full width of its container */
+  width: 30%;
 }
 
 /* About Page */
