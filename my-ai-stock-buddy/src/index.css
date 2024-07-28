@@ -13,6 +13,206 @@ code {
 }
 
 
+/* Login Page */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.login-box {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.forgot-password {
+  color: #007bff;
+  text-decoration: none;
+  float: right;
+  font-size: 12px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.create-account {
+  margin: 20px 0;
+  color: #aaa;
+  font-size: 14px;
+  position: relative;
+}
+
+.create-account::before,
+.create-account::after {
+  content: "";
+  height: 1px;
+  background: #ddd;
+  position: absolute;
+  top: 50%;
+  width: 27%;
+}
+
+.create-account::before {
+  left: 0;
+}
+
+.create-account::after {
+  right: 0;
+}
+
+.signup-button {
+  background-color: #ddd;
+  font-size: 12px;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Signup Page */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.signup-box {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.signup-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-sign {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group-sign label {
+  display: contents;
+}
+
+.form-group-sign input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup-button-sign {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-link {
+  margin: 20px 0;
+  color: #aaa;
+  font-size: 14px;
+  position: relative;
+}
+
+.login-link::before,
+.login-link::after {
+  content: "";
+  height: 1px;
+  background: #ddd;
+  position: absolute;
+  top: 50%;
+  width: 20%;
+}
+
+.login-link::before {
+  left: 0;
+}
+
+.login-link::after {
+  right: 0;
+}
+
+.login-button-sign {
+  background-color: #ddd;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 30%;
+}
+
 /* About Page */
 .About-Image{
   padding-top: 15px;
